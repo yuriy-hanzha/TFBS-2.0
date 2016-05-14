@@ -1,0 +1,22 @@
+﻿<form class="form-horizontal" style="padding: 2%">
+    <div class="well">
+        <h2>Manage</h2>
+        <h4>Manage your account settings</h4>
+    </div>
+    <div class="well" style="overflow: hidden">
+        <h4>Avatar:</h4>
+        <input type="file" id="fileInput" accept="image/*" />
+        <div style="margin-top: 10px; display: none" id="avatarDiv">
+            
+            <div style="float: left; background: #E4E4E4; overflow: hidden; width:500px; height:350px;">
+                <img-crop id="stockImg" change-on-fly="true" area-type="square" image="myImage" result-image="myCroppedImage"></img-crop>
+            </div>
+            <div style="float: left; margin-left: 10px">
+                <img style=" width: 100px; height: 100px" ng-src="{{myCroppedImage}}"/>
+            </div>
+
+            <button style="float: left; clear: left; margin: 5px" class="btn btn-default" ng-click="saveImg()">Save</button>
+            <button style="float: left; clear: right; margin: 5px" class="btn btn-default" ng-click="CanselImg()">Cansel</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,29 @@
+﻿<form class="form-horizontal" style="padding: 2%">
+    <p id="votes-count">{{votes}}</p>
+    <div class="well" align="right">
+        <textarea ng-model="newCommentText" class="form-control" style="width: 100%; resize: vertical; margin-bottom: 1%" placeholder="Type your comment here..."></textarea>
+        <button class="btn btn-info" ng-click="AddNewComment()">Send Feedback</button>
+    </div>
+    <div class="well">
+        <ul id="feeds-list">
+            <li ng-repeat="comment in comments">
+                <div>
+                    <div class="avatar-container">
+                        <img class="avatar" ng-src="{{comment.avatar}}"/>
+                    </div>
+                    <div class="comment-container">
+                        <b class="h3">{{comment.author}}</b> <br/>
+                        <b class="h4">{{comment.text}}</b>
+                    </div>
+                </div>
+                <div class="comment-footer">
+                    <p class="footer-votes h5">{{comment.dislikes}}</p>
+                    <img  class="footer-votes" src="../../content/img/dislike.png" ng-click="VoteDown($index)"/>
+
+                    <p class="footer-votes h5">{{comment.likes}}</p>
+                    <img class="footer-votes" src="../../content/img/like.png" ng-click="VoteUp($index)" />
+                </div>
+            </li>
+        </ul>
+    </div>
+</form>
