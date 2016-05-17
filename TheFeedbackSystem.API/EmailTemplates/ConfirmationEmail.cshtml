@@ -1,0 +1,33 @@
+﻿@model TheFeedbackSystem.API.Models.MailingModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>The last stage of registration | TFBS</title>
+    <link href="https://bootswatch.com/yeti/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <form class="form-horizontal" style="padding: 2%">
+        <div class="well">
+            <div class="panel panel-primary">
+                <div class="panel-heading" align="center">
+                    Do not forget to confirm your TFBS account
+                </div>
+                <div class="panel-body">
+                    <h5>
+                        Hello, @Model.User.UserName! <br />
+                        You recently created an account on TFBS. Confirm it in order to complete the registration. <br />
+                    </h5>
+                    <a href="http://localhost:27680/#/confirmation/@Model.ConfirmationKey" class="btn btn-primary">Get Started</a> <br />
+                    <h5>
+                        Thank you for joining us! <br />
+                        TFBS team <br />
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

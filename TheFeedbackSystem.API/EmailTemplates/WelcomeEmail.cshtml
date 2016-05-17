@@ -1,0 +1,32 @@
+﻿@model TheFeedbackSystem.API.Models.MailingModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Welcome | TFBS</title>
+    <link href="https://bootswatch.com/yeti/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <form class="form-horizontal" style="padding: 2%">
+        <div class="well">
+            <div class="panel panel-primary">
+                <div class="panel-heading" align="center">
+                    Hello, @Model.User.UserName
+                </div>
+                <div class="panel-body">
+                    <h5>
+                        Your account has been created - now you can send feedback about our service.
+                    </h5>
+                    <a href="http://localhost:27680/#/" class="btn btn-primary">Get Started</a> <br />
+                    <h5>
+                        Thank you for joining us!
+                        TFBS team
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
