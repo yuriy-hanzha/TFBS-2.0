@@ -32,51 +32,51 @@ namespace TheFeedbackSystem.API
 
         public void SendWelcomeMessage(IdentityUser user)
         {
-            var templateFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "EmailTemplates", "WelcomeEmail.cshtml");
-            var templateService = new TemplateService();
-            var emailHtmlBody = templateService.Parse(
-                File.ReadAllText(templateFilePath), new MailingModel() { User = user }, null, "WelcomeEmail");
-            var inlinedHtmlBody = PreMailer.Net.PreMailer.MoveCssInline(emailHtmlBody).Html;
+            //var templateFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "EmailTemplates", "WelcomeEmail.cshtml");
+            //var templateService = new TemplateService();
+            //var emailHtmlBody = templateService.Parse(
+            //    File.ReadAllText(templateFilePath), new MailingModel() { User = user }, null, "WelcomeEmail");
+            //var inlinedHtmlBody = PreMailer.Net.PreMailer.MoveCssInline(emailHtmlBody).Html;
 
-            MailMessage mail = new MailMessage()
-            {
-                From = new MailAddress("thefeedbacksystem@radacode.net"),
-                To = { user.Email },
-                Subject = "Welcome | TFBS",
-                Body = inlinedHtmlBody,
-                IsBodyHtml = true,
-            };
+            //MailMessage mail = new MailMessage()
+            //{
+            //    From = new MailAddress("thefeedbacksystem@radacode.net"),
+            //    To = { user.Email },
+            //    Subject = "Welcome | TFBS",
+            //    Body = inlinedHtmlBody,
+            //    IsBodyHtml = true,
+            //};
 
-            smtpServer.Send(mail);
+            //smtpServer.Send(mail);
         }
 
         public void SendConfirmationMessage(IdentityUser user)
         {
-            string userId = _userManager.FindByName(user.UserName).Id;
-            string key = Guid.NewGuid().ToString().Replace("-", "").ToUpper();
-            _ctx.ConfirmationKeys.Add(new ConfirmationKey()
-            {
-                UserId = userId,
-                Key = key
-            });
-            _ctx.SaveChanges();
+            //string userId = _userManager.FindByName(user.UserName).Id;
+            //string key = Guid.NewGuid().ToString().Replace("-", "").ToUpper();
+            //_ctx.ConfirmationKeys.Add(new ConfirmationKey()
+            //{
+            //    UserId = userId,
+            //    Key = key
+            //});
+            //_ctx.SaveChanges();
 
-            var templateFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "EmailTemplates", "ConfirmationEmail.cshtml");
-            var templateService = new TemplateService();
-            var emailHtmlBody = templateService.Parse(
-                File.ReadAllText(templateFilePath), new MailingModel() { User = user, ConfirmationKey = key }, null, "ConfirmationEmail");
-            var inlinedHtmlBody = PreMailer.Net.PreMailer.MoveCssInline(emailHtmlBody).Html;
+            //var templateFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "EmailTemplates", "ConfirmationEmail.cshtml");
+            //var templateService = new TemplateService();
+            //var emailHtmlBody = templateService.Parse(
+            //    File.ReadAllText(templateFilePath), new MailingModel() { User = user, ConfirmationKey = key }, null, "ConfirmationEmail");
+            //var inlinedHtmlBody = PreMailer.Net.PreMailer.MoveCssInline(emailHtmlBody).Html;
 
-            MailMessage mail = new MailMessage()
-            {
-                From = new MailAddress("thefeedbacksystem@radacode.net"),
-                To = { user.Email },
-                Subject = "The last stage of registration | TFBS",
-                Body = inlinedHtmlBody,
-                IsBodyHtml = true,
-            };
+            //MailMessage mail = new MailMessage()
+            //{
+            //    From = new MailAddress("thefeedbacksystem@radacode.net"),
+            //    To = { user.Email },
+            //    Subject = "The last stage of registration | TFBS",
+            //    Body = inlinedHtmlBody,
+            //    IsBodyHtml = true,
+            //};
 
-            smtpServer.Send(mail);
+            //smtpServer.Send(mail);
         }
     }
 }

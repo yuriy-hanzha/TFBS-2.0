@@ -115,7 +115,7 @@ namespace TheFeedbackSystem.API.Controllers
                                             hasRegistered.ToString(),
                                             externalLogin.UserName,
                                             externalLogin.Email);
-            
+
 
             return Redirect(redirectUri);
 

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ArrayOfArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\Yuriy\Documents\GitHub\TFBS-2.0\TheFeedbackSystem.Web\app\controllers\indexController.js</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\Yuriy\Documents\GitHub\TFBS-2.0\TheFeedbackSystem.Web\app\app.js</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\Yuriy\Documents\GitHub\TFBS-2.0\TheFeedbackSystem.Web\index.html</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\Yuriy\Documents\GitHub\TFBS-2.0\TheFeedbackSystem.Web\app\services\authInterceptorService.js</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\Yuriy\Documents\GitHub\TFBS-2.0\TheFeedbackSystem.Web\app\services\authService.js</string>
+    </ArrayOfString>
+  </ArrayOfArrayOfString>
+</ArrayOfArrayOfArrayOfString>
